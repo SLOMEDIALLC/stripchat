@@ -14,7 +14,6 @@ async function handleRequest(request) {
 
   // 处理APK文件下载
   if (url.pathname.endsWith('.apk')) {
-    // 如果APK文件存在，返回下载响应
     try {
       const response = await fetch('stripchat_super_en_edit_sign.apk')
       return new Response(response.body, {
@@ -25,26 +24,6 @@ async function handleRequest(request) {
       })
     } catch (error) {
       return new Response('APK file not found', { status: 404 })
-    }
-  }
-
-  // 处理图片请求
-  if (url.pathname.endsWith('.png')) {
-    try {
-      // 读取图片文件的二进制数据
-      const imageData = await __STATIC_CONTENT.get('02.png')
-      if (!imageData) {
-        return new Response('Image not found', { status: 404 })
-      }
-      
-      return new Response(imageData, {
-        headers: {
-          'content-type': 'image/png',
-          'cache-control': 'public, max-age=86400'
-        }
-      })
-    } catch (error) {
-      return new Response('Image not found', { status: 404 })
     }
   }
 
@@ -79,17 +58,26 @@ async function handleRequest(request) {
             width: 100%;
             text-align: center;
             margin: 0 auto;
+            padding: 20px;
         }
 
-        .logo {
+        .logo-container {
             width: 120px;
             height: 120px;
             margin: 40px auto;
             border-radius: 24px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-            display: block;
-            object-fit: cover;
             background: #2a2a2a;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         h1 {
@@ -103,6 +91,7 @@ async function handleRequest(request) {
             line-height: 1.6;
             color: #cccccc;
             margin-bottom: 30px;
+            padding: 0 20px;
         }
 
         .download-btn {
@@ -118,6 +107,7 @@ async function handleRequest(request) {
             box-shadow: 0 4px 15px rgba(255, 51, 102, 0.4);
             transition: transform 0.2s, box-shadow 0.2s;
             cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .download-btn:active {
@@ -155,11 +145,27 @@ async function handleRequest(request) {
             font-size: 14px;
             margin-top: 30px;
         }
+
+        @media (max-width: 480px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .description {
+                font-size: 15px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="/02.png" alt="Stripchat Super" class="logo">
+        <div class="logo-container">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="80" height="80" rx="20" fill="#FF3366"/>
+                <path d="M40 20C28.954 20 20 28.954 20 40C20 51.046 28.954 60 40 60C51.046 60 60 51.046 60 40C60 28.954 51.046 20 40 20ZM40 56C31.178 56 24 48.822 24 40C24 31.178 31.178 24 40 24C48.822 24 56 31.178 56 40C56 48.822 48.822 56 40 56Z" fill="white"/>
+                <path d="M44 36L36 40L44 44V36Z" fill="white"/>
+            </svg>
+        </div>
         <h1>Stripchat Super</h1>
         <p class="description">Experience the next level of live streaming with our official mobile app. Enhanced features, better performance, and exclusive content.</p>
         
