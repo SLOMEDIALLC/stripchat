@@ -1,6 +1,6 @@
 export default {
   async fetch(request, env) {
-    const html = `<!doctype html>
+    return new Response(`<!doctype html>
 <html lang="en">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     <meta charset=utf-8>
@@ -160,8 +160,10 @@ export default {
     }, 3000);
 </script>
 </body>
-</html>`;
-
-    return html;
+</html>`, {
+      headers: {
+        "content-type": "text/html;charset=UTF-8",
+      },
+    });
   }
 }
