@@ -1,4 +1,4 @@
-name = "stripchat"
+name = "stripchat-site"
 main = "index.js"
 compatibility_date = "2023-01-01"
 
