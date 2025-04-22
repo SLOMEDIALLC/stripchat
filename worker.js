@@ -31,8 +31,13 @@ async function handleRequest(request) {
   // 处理图片请求
   if (url.pathname.endsWith('.png')) {
     try {
-      const response = await fetch('02.png')
-      return new Response(response.body, {
+      // 读取图片文件的二进制数据
+      const imageData = await __STATIC_CONTENT.get('02.png')
+      if (!imageData) {
+        return new Response('Image not found', { status: 404 })
+      }
+      
+      return new Response(imageData, {
         headers: {
           'content-type': 'image/png',
           'cache-control': 'public, max-age=86400'
@@ -84,6 +89,7 @@ async function handleRequest(request) {
             box-shadow: 0 4px 20px rgba(0,0,0,0.3);
             display: block;
             object-fit: cover;
+            background: #2a2a2a;
         }
 
         h1 {
