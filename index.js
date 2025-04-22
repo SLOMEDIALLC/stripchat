@@ -7,7 +7,6 @@ export default {
     <title>Free Live Sex Cams and Nude Girls Chat | Stripchat</title>
     <meta data-helmet="1" property="og:type" content="website">
     <meta data-helmet="1" property="og:image" content="https://cdn.strpst.com/assets/icons/metaogimage.jpg?v=4f3e5e4b">
-    <meta data-helmet="1" property="og:url" content="https://en.stripchat.com/">
     <meta data-helmet="1" name="twitter:card" content="summary_large_image">
     <meta data-helmet="1" property="og:site_name" content="Stripchat – Free Live Cams Community">
     <meta data-helmet="1" name="twitter:creator" content="@stripchat">
@@ -28,16 +27,6 @@ export default {
     <meta name=google content=notranslate>
     <meta name=google-signin-scope content="profile email">
     <meta name=google-signin-client_id content=67819290237-pean7okuo1c6a4bf5g19d9anjj15uvp6.apps.googleusercontent.com>
-    <meta name=msapplication-square70x70logo
-          content="https://assets.strpst.com/assets/icons/mstile-70x70.png?v=9670c787">
-    <meta name=msapplication-square150x150logo
-          content="https://assets.strpst.com/assets/icons/mstile-150x150.png?v=9670c787">
-    <meta name=msapplication-square270x270logo
-          content="https://assets.strpst.com/assets/icons/mstile-270x270.png?v=9670c787">
-    <meta name=msapplication-wide310x150logo
-          content="https://assets.strpst.com/assets/icons/mstile-310x150.png?v=9670c787">
-    <meta name=msapplication-square310x310logo
-          content="https://assets.strpst.com/assets/icons/mstile-310x310.png?v=9670c787">
     <meta name=application-name content=Stripchat>
     <meta name=msapplication-TileColor content=#000000>
     <style>:root {
@@ -53,31 +42,6 @@ export default {
     <style>.disable-transition * {
         transition: none !important
     }</style>
-    <link rel=preload href=https://assets.strpst.com/assets/bootstrap_dark.20231012050342.css as=style>
-    <link media="screen and (max-width: 1279px)" rel=preload
-          href=https://assets.strpst.com/assets/bootstrap_dark_mobile.20231012050342.css as=style>
-    <script>window.SSR_ICONS = ["rta-logo", "safe-labeling", "asacp", "pineapple-support", "menu", "dot", "best-models", "search-3", "filter", "menu-mobile", "sort", "categories-2", "close-2", "close-3", "home", "feed", "recommended", "favorited", "watch-history", "lightning", "badge-vr-ds", "bunny-mask", "candy-ds", "interactive-toy-ds", "mobile", "i18n", "close-arrow", "arrow-down-filled", "heart-fill", "badge-new-ds", "medal-3", "ticket", "chevron-down", "mobile-phone-ds", "medal-1", "close-7", "camera-plus", "group", "medal-2", "about", "stripchat-logo", "twitter", "reddit", "inquiries", "agreement"]</script>
-    <link rel=stylesheet data-href=https://assets.strpst.com/assets/bootstrap_theme.20231012050342.css
-          href=https://assets.strpst.com/assets/bootstrap_dark.20231012050342.css>
-    <link media="screen and (max-width:1279px)" rel=stylesheet
-          href=https://assets.strpst.com/assets/bootstrap_dark_mobile.20231012050342.css>
-    <link rel=icon sizes=16x16 href="https://assets.strpst.com/assets/icons/favicon-16x16.png?v=9670c787">
-    <link rel=icon sizes=32x32 href="https://assets.strpst.com/assets/icons/favicon-32x32.png?v=9670c787">
-    <link rel=icon sizes=196x196 href="https://assets.strpst.com/assets/icons/favicon-196x196.png?v=9670c787">
-    <link rel=icon sizes=512x512 href="https://assets.strpst.com/assets/icons/favicon-512x512.png?v=9670c787">
-    <link rel=mask-icon href=https://assets.strpst.com/assets/icons/mask-icon.png>
-    <link rel=apple-touch-icon sizes=120x120
-          href="https://assets.strpst.com/assets/icons/apple-touch-icon-120x120.png?v=f86ed58a">
-    <link rel=apple-touch-icon sizes=152x152
-          href="https://assets.strpst.com/assets/icons/apple-touch-icon-152x152.png?v=f86ed58a">
-    <link rel=apple-touch-icon sizes=167x167
-          href="https://assets.strpst.com/assets/icons/apple-touch-icon-167x167.png?v=f86ed58a">
-    <link rel=apple-touch-icon sizes=180x180
-          href="https://assets.strpst.com/assets/icons/apple-touch-icon-180x180.png?v=f86ed58a">
-    <link rel=dns-prefetch href=//img.stripst.com>
-    <link rel=preconnect href=//img.stripst.com>
-    <link rel=preconnect href=/api/front>
-    <script src="/static/plugs/jquery-3.4.1/jquery-3.4.1.min.js"></script>
     <style>
         body, div#body, html {
             background-color: #0b0b0b !important;
