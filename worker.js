@@ -12,8 +12,16 @@ async function handleRequest(request) {
     return Response.redirect(`${url.origin}/${randomString}`, 302)
   }
 
-  // 如果访问的是随机路径或其他路径，返回index.html
-  return env.ASSETS.fetch(new Request('index.html'))
+  try {
+    // 返回index.html的内容
+    return new Response(await fetch('index.html'), {
+      headers: {
+        'content-type': 'text/html;charset=UTF-8',
+      },
+    })
+  } catch (error) {
+    return new Response('Error loading page', { status: 500 })
+  }
 }
 
 function generateRandomString(length) {
