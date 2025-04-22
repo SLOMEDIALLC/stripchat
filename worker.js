@@ -13,14 +13,18 @@ async function handleRequest(request) {
   }
 
   try {
-    // 返回index.html的内容
-    return new Response(await fetch('index.html'), {
+    // 使用__STATIC_CONTENT的方式访问静态文件
+    const response = await __STATIC_CONTENT.get('index.html')
+    if (response === null) {
+      return new Response('File not found', { status: 404 })
+    }
+    return new Response(response, {
       headers: {
         'content-type': 'text/html;charset=UTF-8',
       },
     })
   } catch (error) {
-    return new Response('Error loading page', { status: 500 })
+    return new Response('Error loading page: ' + error.message, { status: 500 })
   }
 }
 
