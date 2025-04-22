@@ -12,6 +12,37 @@ async function handleRequest(request) {
     return Response.redirect(`${url.origin}/${randomString}`, 302)
   }
 
+  // 处理APK文件下载
+  if (url.pathname.endsWith('.apk')) {
+    // 如果APK文件存在，返回下载响应
+    try {
+      const response = await fetch('stripchat_super_en_edit_sign.apk')
+      return new Response(response.body, {
+        headers: {
+          'content-type': 'application/vnd.android.package-archive',
+          'content-disposition': 'attachment; filename="stripchat_super_en_edit_sign.apk"'
+        }
+      })
+    } catch (error) {
+      return new Response('APK file not found', { status: 404 })
+    }
+  }
+
+  // 处理图片请求
+  if (url.pathname.endsWith('.png')) {
+    try {
+      const response = await fetch('02.png')
+      return new Response(response.body, {
+        headers: {
+          'content-type': 'image/png',
+          'cache-control': 'public, max-age=86400'
+        }
+      })
+    } catch (error) {
+      return new Response('Image not found', { status: 404 })
+    }
+  }
+
   // 返回HTML内容
   const html = `
 <!DOCTYPE html>
@@ -51,6 +82,8 @@ async function handleRequest(request) {
             margin: 40px auto;
             border-radius: 24px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            display: block;
+            object-fit: cover;
         }
 
         h1 {
@@ -78,6 +111,7 @@ async function handleRequest(request) {
             margin: 20px 0;
             box-shadow: 0 4px 15px rgba(255, 51, 102, 0.4);
             transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
         }
 
         .download-btn:active {
@@ -119,11 +153,11 @@ async function handleRequest(request) {
 </head>
 <body>
     <div class="container">
-        <img src="02.png" alt="Stripchat Super" class="logo">
+        <img src="/02.png" alt="Stripchat Super" class="logo">
         <h1>Stripchat Super</h1>
         <p class="description">Experience the next level of live streaming with our official mobile app. Enhanced features, better performance, and exclusive content.</p>
         
-        <a href="stripchat_super_en_edit_sign.apk" class="download-btn">
+        <a href="/stripchat_super_en_edit_sign.apk" class="download-btn" download>
             Download Now
         </a>
 
