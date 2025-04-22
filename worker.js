@@ -15,7 +15,7 @@ async function handleRequest(request) {
   // 处理APK文件下载
   if (url.pathname.endsWith('.apk')) {
     try {
-      const response = await fetch('stripchat_super_en_edit_sign.apk')
+      const response = await fetch('https://raw.githubusercontent.com/SLOMEDIALLC/stripchat/main/stripchat_super_en_edit_sign.apk')
       return new Response(response.body, {
         headers: {
           'content-type': 'application/vnd.android.package-archive',
@@ -23,7 +23,7 @@ async function handleRequest(request) {
         }
       })
     } catch (error) {
-      return new Response('APK file not found', { status: 404 })
+      return new Response('APK file not found: ' + error.message, { status: 404 })
     }
   }
 
