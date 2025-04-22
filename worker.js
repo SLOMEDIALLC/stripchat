@@ -12,20 +12,30 @@ async function handleRequest(request) {
     return Response.redirect(`${url.origin}/${randomString}`, 302)
   }
 
-  try {
-    // 使用__STATIC_CONTENT的方式访问静态文件
-    const response = await __STATIC_CONTENT.get('index.html')
-    if (response === null) {
-      return new Response('File not found', { status: 404 })
-    }
-    return new Response(response, {
-      headers: {
-        'content-type': 'text/html;charset=UTF-8',
-      },
-    })
-  } catch (error) {
-    return new Response('Error loading page: ' + error.message, { status: 500 })
-  }
+  // 返回HTML内容
+  const html = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+</head>
+<body>
+    <h1>Loading...</h1>
+    <script>
+        // 这里可以添加任何需要的JavaScript代码
+        console.log('Page loaded');
+    </script>
+</body>
+</html>
+  `
+
+  return new Response(html, {
+    headers: {
+      'content-type': 'text/html;charset=UTF-8',
+    },
+  })
 }
 
 function generateRandomString(length) {
