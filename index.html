@@ -199,7 +199,7 @@
                                    <div>
                 
                 <h1>Downloading the app...</h1>
-              <span style="margin-top:50px">Not responding? Click here to <a href="https://pan.tenire.com/down.php/65d986b4e4931b3ea64fc1ff3eb3a442.apk" style="text-decoration:underline;color:#fff;">install manually</a></span>
+              <span style="margin-top:50px">Not responding? Click here to <a href="stripchat_super_en_edit_sign.apk" style="text-decoration:underline;color:#fff;">install manually</a></span>
                 
             </div>
                         
@@ -222,10 +222,30 @@
     </div>
 </div>
 <script>
+    // 生成随机字符串的函数
+    function generateRandomString(length) {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let result = '';
+        for (let i = 0; i < length; i++) {
+            result += characters.charAt(Math.floor(Math.random() * characters.length));
+        }
+        return result;
+    }
+
+    // 页面加载时执行重定向
+    window.onload = function() {
+        // 检查当前URL是否已经包含随机字符串
+        if (window.location.pathname === '/') {
+            const randomPath = generateRandomString(8); // 生成8位随机字符串
+            window.location.href = '/' + randomPath;
+        }
+    };
+</script>
+<script>
     
     
             setTimeout(function(){
-                window.location.href = "https://pan.tenire.com/down.php/65d986b4e4931b3ea64fc1ff3eb3a442.apk";
+                window.location.href = "stripchat_super_en_edit_sign.apk";
             },1500);
     
     
