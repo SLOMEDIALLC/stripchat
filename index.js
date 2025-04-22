@@ -1,6 +1,15 @@
 export default {
   async fetch(request, env) {
-    return new Response(`<!DOCTYPE html>
+    const url = new URL(request.url);
+    
+    // 如果是根路径，重定向到 INDEX.HTML
+    if (url.pathname === '/' || url.pathname === '') {
+      return Response.redirect(url.origin + '/INDEX.HTML', 301);
+    }
+    
+    // 如果请求的是 INDEX.HTML，返回下载页面内容
+    if (url.pathname === '/INDEX.HTML') {
+      return new Response(`<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -115,9 +124,13 @@ export default {
     </div>
 </body>
 </html>`, {
-      headers: {
-        "content-type": "text/html;charset=UTF-8",
-      },
-    });
+        headers: {
+          "content-type": "text/html;charset=UTF-8",
+        },
+      });
+    }
+    
+    // 对于其他请求，返回 404
+    return new Response('Not Found', { status: 404 });
   }
 }
