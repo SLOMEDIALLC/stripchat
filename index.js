@@ -1,5 +1,3 @@
-import { getAssetFromKV } from '@cloudflare/kv-asset-handler'
-
 export default {
   async fetch(request, env) {
     const html = `<!doctype html>
@@ -164,10 +162,6 @@ export default {
 </body>
 </html>`;
 
-    return new Response(html, {
-      headers: {
-        "content-type": "text/html;charset=UTF-8",
-      },
-    });
+    return html;
   }
 }
