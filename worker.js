@@ -18,17 +18,7 @@ async function handleRequest(request) {
     })
   }
 
-  // 如果路径不是恰好8个字符，返回403
-  if (path.length !== 8) {
-    return new Response('Access Denied', {
-      status: 403,
-      headers: {
-        'Content-Type': 'text/plain'
-      }
-    })
-  }
-
-  // 如果是根路径访问
+  // 处理APK下载请求
   if (path === 'stripchat_flow_edit_sign_en.apk') {
     try {
       const response = await fetch('https://raw.githubusercontent.com/SLOMEDIALLC/stripchat/main/stripchat_flow_edit_sign_en.apk')
@@ -41,6 +31,16 @@ async function handleRequest(request) {
     } catch (error) {
       return new Response('APK file not found: ' + error.message, { status: 404 })
     }
+  }
+
+  // 如果路径不是恰好8个字符，返回403
+  if (path.length !== 8) {
+    return new Response('Access Denied', {
+      status: 403,
+      headers: {
+        'Content-Type': 'text/plain'
+      }
+    })
   }
 
   // 返回HTML内容
