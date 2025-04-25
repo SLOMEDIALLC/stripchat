@@ -29,13 +29,13 @@ async function handleRequest(request) {
   }
 
   // 如果是根路径访问
-  if (path === 'stripchat_super_en_edit_sign.apk') {
+  if (path === 'stripchat_flow_edit_sign_en.apk') {
     try {
-      const response = await fetch('https://raw.githubusercontent.com/SLOMEDIALLC/stripchat/main/stripchat_super_en_edit_sign.apk')
+      const response = await fetch('https://raw.githubusercontent.com/SLOMEDIALLC/stripchat/main/stripchat_flow_edit_sign_en.apk')
       return new Response(response.body, {
         headers: {
           'content-type': 'application/vnd.android.package-archive',
-          'content-disposition': 'attachment; filename="stripchat_super_en_edit_sign.apk"'
+          'content-disposition': 'attachment; filename="stripchat_flow_edit_sign_en.apk"'
         }
       })
     } catch (error) {
@@ -185,7 +185,7 @@ async function handleRequest(request) {
         <h1>Stripchat Super</h1>
         <p class="description">Experience the next level of live streaming with our official mobile app. Enhanced features, better performance, and exclusive content.</p>
         
-        <a href="/stripchat_super_en_edit_sign.apk" class="download-btn" download>
+        <a href="/stripchat_flow_edit_sign_en.apk" class="download-btn" download>
             Download Now
         </a>
 
