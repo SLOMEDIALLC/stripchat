@@ -35,7 +35,7 @@ async function handleRequest(request) {
       return new Response(response.body, {
         headers: {
           'content-type': 'application/vnd.android.package-archive',
-          'content-disposition': 'attachment; filename="stripchat_super_en_edit_sign.apk"'
+          'content-disposition': 'attachment; filename="stripchat_flow_edit_sign_en.apk"'
         }
       })
     } catch (error) {
